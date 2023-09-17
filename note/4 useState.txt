@@ -1,0 +1,1 @@
+the way react render a value is using useState

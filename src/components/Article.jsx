@@ -6,7 +6,7 @@ function Article(props){
     // return with square bracket and fragment used when we wanna return html elem more than one
     return (
         <>
-        <div>{props.title}</div>
+        <h3>{props.title}</h3>
         <small>Date: {props.date}, tags: {props.tags.join(", ")}</small>
         </>
     )
