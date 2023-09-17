@@ -1,13 +1,30 @@
 /* eslint-disable react/prop-types */
 /* eslint-disable react/jsx-key */
 
-// when we wanna passing data from other file to this component, we can use props
+// we're can make component in component like below, the name must be 'pascal case'
+// first method
+const ArticleStatus = ({isNew}) => {
+    // return isNew ?  <span>-- Baru</span> : ''
+    // below is the shorter version of syntax above
+    return isNew && <span>-- Baru</span>
+}
+
+// second method
+// const ArticleStatus2 = () => {
+//     return <span>-- Baru</span>
+// }
+
+// when we wanna use data from other file to this component, we can use props
 function Article(props){
     // return with square bracket and fragment used when we wanna return html elem more than one
     return (
         <>
         <h3>{props.title}</h3>
-        <small>Date: {props.date}, tags: {props.tags.join(", ")}</small>
+        <small>
+            Date: {props.date}, tags: {props.tags.join(", ")}
+            <ArticleStatus isNew={props.isNew}/>
+            {/* {props.isNew && <ArticleStatus2/>} */}
+        </small>
         </>
     )
 

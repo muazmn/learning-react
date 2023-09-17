@@ -17,7 +17,7 @@ function Search(props) {
             {/* onChange used to inform to react if there's something changes in that element(input) and execute the given function*/}
             Cari Artikel: <input onChange={onSearchChange}></input>
         </div>
-            <small>0 data found with keyword {search}</small>
+            <small>{props.totalPosts} data found with keyword {search}</small>
         </> 
     );
 }
