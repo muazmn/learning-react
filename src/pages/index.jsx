@@ -9,6 +9,7 @@ import postsData from '../posts.json'
 function HomePage() {
     const[posts,setPosts] = useState(postsData);
     const[totalPosts, setTotalPosts] = useState(0);
+    const[externalPosts, setExternalPosts] = useState([])
 
     
     // the value is come from event.target.value in Search component
@@ -22,12 +23,10 @@ function HomePage() {
     // the way we wanna execute it process when there's state changed, just put the posts in the array as an example(componentDidUpdate)
     // the return concept is like componentDidUnmount, used when we wanna remove listener or other to make our app lighter
     useEffect(() => {
-        console.log("render")
-
-        return() => {
-            console.log('cleanUp')
-        }
-    },[posts]);
+        fetch("https://jsonplaceholder.typicode.com/posts")
+      .then((response) => response.json())
+      .then((json) => setExternalPosts(json));
+    },[]);
     return ( 
         <>
         <h1>Simple Blog</h1>
@@ -43,6 +42,11 @@ function HomePage() {
         {/* {posts.map((blog) => (
                 <Article title={blog.title} tags={blog.tags} date={blog.date} />
             ))} */}
+            <hr />
+            <h2>External Posts</h2>
+            {externalPosts.map((item, index) => (
+                <div key={index}>- {item.title}</div>
+            ))}
         </>
      );
 }
