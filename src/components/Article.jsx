@@ -1,14 +1,15 @@
+/* eslint-disable react/prop-types */
 /* eslint-disable react/jsx-key */
-function Article(){
-const name = "muaz"
-const titles = ['ahmad', 'muaz', 'aiman'];
+
+// when we wanna passing data from other file to this component, we can use props
+function Article(props){
     // return with square bracket and fragment used when we wanna return html elem more than one
     return (
         <>
-        <div>{name}</div>
-        <div>{titles.map((title) => {
+        <div>{props.name}</div>
+        <div>{props.titles.map((title) => {
             return (
-                <div>{title}</div>
+                <div>- {title}</div>
             )
         })}</div>
         </>
