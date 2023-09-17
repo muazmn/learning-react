@@ -27,6 +27,16 @@ function HomePage() {
       .then((response) => response.json())
       .then((json) => setExternalPosts(json));
     },[]);
+
+    // we use multiple useEffect coz we dont wanna the api request made everytime there's changes on posts state. 
+    useEffect(() => {
+        console.log("new post available")
+    }, [posts])
+
+    // useState above just an example of contiously execute process in it, dont need to use array 
+    useEffect(() => {
+        console.log('render')
+    })
     return ( 
         <>
         <h1>Simple Blog</h1>
