@@ -14,7 +14,7 @@ const ArticleStatus = ({isNew}) => {
 //     return <span>-- Baru</span>
 // }
 
-// when we wanna use data from other file to this component, we can use props
+// when we wanna use or pass data from other file to this component, we can use props
 function Article(props){
     // return with square bracket and fragment used when we wanna return html elem more than one
     return (
