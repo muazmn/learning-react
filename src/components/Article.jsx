@@ -1,6 +1,7 @@
 /* eslint-disable react/prop-types */
 /* eslint-disable react/jsx-key */
-
+import { useContext } from "react"
+import { GlobalContext } from "../context"
 // we're can make component in component like below, the name must be 'pascal case'
 // first method
 const ArticleStatus = ({isNew}) => {
@@ -16,6 +17,7 @@ const ArticleStatus = ({isNew}) => {
 
 // when we wanna use or pass data from other file to this component, we can use props
 function Article(props){
+    const user = useContext(GlobalContext);
     // return with square bracket and fragment used when we wanna return html elem more than one
     return (
         <>
@@ -25,6 +27,9 @@ function Article(props){
             <ArticleStatus isNew={props.isNew}/>
             {/* {props.isNew && <ArticleStatus2/>} */}
         </small>
+        <div>
+            <small>Writen by {user.username}</small>
+        </div>
         </>
     )
 
