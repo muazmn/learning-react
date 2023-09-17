@@ -1,0 +1,13 @@
+1 . react-fundamental\index.html
+- there's #root that's used to inject following id, if we remove this id, the react element will disappeared
+
+2 . react-fundamental\package.json
+- dev: used when we develop our app locally 
+- build: used when our application need to deploy to server
+
+3 . react-fundamental\src\App.jsx
+ - this is a component, also called as root component
+
+4 . react-fundamental\src\main.jsx
+  - entry point of the react application, entry point means this is a file would be called first by react
+  - React.StrictMode will help us in development, for instance, if there's error, the React.StrictMode will help us to improve our code
