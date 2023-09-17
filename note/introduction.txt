@@ -1,0 +1,5 @@
+there's multiple ways to install react 
+
+1 . using cdn: this is not recommended coz not scalable 
+2 . using CRA: 
+3 . using VITE: vite faster than CRA 
