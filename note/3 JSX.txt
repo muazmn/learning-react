@@ -1,0 +1,1 @@
+- in jsx file, anything inside curly brackets is something dynamic or something can be changed dynamically, we can fill variable in it, but we're also fill hard code value in it
