@@ -1,0 +1,8 @@
+- useEffect used when we wanna execute a function first everytime our application start or the related component rendered
+
+- in the old version react, there are three lifecycle 
+1 . componentDidMount : when a component rendered, it will execute it componentDidMount first.
+2 . componentDidUpdate : used when we wanna execute a function everytime there's a specific state changes
+3 . componentWillUnmount : used when that component will destroyed
+
+- btw, in newer version react(reactHook), we can achieve three function above with useEffect

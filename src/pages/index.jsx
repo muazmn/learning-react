@@ -1,5 +1,5 @@
 /* eslint-disable react/jsx-key */
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import Article from '../components/Article';
 import Search from '../components/Search';
 import postsData from '../posts.json'
@@ -17,6 +17,17 @@ function HomePage() {
       setPosts(filterPosts)
       setTotalPosts(filterPosts.length)
     };
+
+    // the zero array will make sure console.log() just executed once(componentDidMount) and the zero array will monitor the state, if there's no state, it wouldn't execute process in the useEffect and just executed it once 
+    // the way we wanna execute it process when there's state changed, just put the posts in the array as an example(componentDidUpdate)
+    // the return concept is like componentDidUnmount, used when we wanna remove listener or other to make our app lighter
+    useEffect(() => {
+        console.log("render")
+
+        return() => {
+            console.log('cleanUp')
+        }
+    },[posts]);
     return ( 
         <>
         <h1>Simple Blog</h1>
