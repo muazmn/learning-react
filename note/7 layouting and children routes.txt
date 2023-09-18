@@ -1,0 +1,1 @@
+- layouting is like reusable pages, when we navigates to other page, the navbar in the layout not reloaded, just content changes, layout like this can be reusable at multiple pages
