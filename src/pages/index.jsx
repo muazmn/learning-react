@@ -6,7 +6,7 @@ import postsData from '../posts.json'
 // import { useState } from 'react';
 
 
-function HomePage() {
+function Home() {
     const[posts,setPosts] = useState(postsData);
     const[totalPosts, setTotalPosts] = useState(0);
     const[externalPosts, setExternalPosts] = useState([])
@@ -61,4 +61,4 @@ function HomePage() {
      );
 }
 
-export default HomePage;
+export default Home;
