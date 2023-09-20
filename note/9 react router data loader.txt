@@ -1,0 +1,1 @@
+loader : will get data from api first, then it will render the component, so whenever component rendered, the data already available, means no delay for data to display

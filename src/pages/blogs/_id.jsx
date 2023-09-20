@@ -1,17 +1,10 @@
 // this page get the parameter id
 
-import{useEffect, useState} from 'react';
-import{useParams} from 'react-router-dom';
+import { useLoaderData } from "react-router-dom";
+
 
 function SinglePost(){
-    const params = useParams();
-    const [post, setPost]  =useState({});
-    useEffect(() => {
-        // the id is come from the name of this file, the file's name must use underscore coz we can use it to identify that is parameter
-        fetch(`https://jsonplaceholder.typicode.com/posts/${params.id}`)
-        .then((response) => response.json()
-        .then((json) => setPost(json)))
-    },);
+    const post = useLoaderData()
 
     return(
         <>
