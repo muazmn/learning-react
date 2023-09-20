@@ -5,7 +5,7 @@ import { Link, Outlet} from "react-router-dom";
 function RootLayout() {
     return (
         <>
-        <Link to='/'>Home</Link> | <Link to="/about">About</Link>
+        <Link to='/'>Home</Link> | <Link to='/blog'>Blog</Link> | <Link to="/about">About</Link>
         {/* it means all pages those are children of this page, put in the element Outlet */}
         <Outlet/>
         </>

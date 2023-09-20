@@ -1,0 +1,1 @@
+- useParams : to take parameter's id from router
